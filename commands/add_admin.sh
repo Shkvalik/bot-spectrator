@@ -1,0 +1,1 @@
+sqlite3 db.db 'insert into access_keys (access_key, status, date_of_expiry) values ("ACKU-1", "admin", "19&&01&&2038");'

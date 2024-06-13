@@ -1,0 +1,30 @@
+version: '3.3'
+
+services:
+  bot:
+    image: "${PROJECT_NAME}"
+    container_name: "${PROJECT_NAME}"
+    stop_signal: SIGINT
+    build:
+      context: .
+    working_dir: "/usr/src/app/my_project"
+    volumes:
+      - .:/usr/src/app/my_project
+    command: python3 -u bot.py
+    restart: always
+    env_file:
+      - ".env"
+    networks:
+      - tg_bot
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "10"
+
+networks:
+  tg_bot:
+    driver: bridge
+
+volumes:
+  cache: { }
