@@ -1,29 +1,19 @@
 betterlogging
 
 aiogram
-aiofiles
-aiosmtplib
 
 environs
 pytz
 
 uvicorn
-fastapi
 python-multipart
 
 pydantic
 redis
-jinja2
 environs
-requests[socks]
-beautifulsoup4
 starlette
-aiohttp_socks
-fake_useragent
-aiohttp
 urllib3
 openpyxl
 
 APScheduler
-xlrd
 httpx[socks]
